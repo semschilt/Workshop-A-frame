@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello, WebVR! • A-Frame</title>
+    <meta name="viewport" content="width=device-width">
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
+    <script src="scripts/main.js" defer></script>
+  </head>
+  <body>
+    <a-scene background="color: #333333" position="0 0 0">
+      <a-assets>
+        <a-assets-item id="bird" response-type="arraybuffer" src="models/hoho/scene.glb"></a-assets-item>
+        <a-assets-item id="pikachu" src="models/pikachu/scene.gltf"></a-assets-item>
+    </a-assets>
+        <a-sky color="#6EBAA7"></a-sky>
+      <a-entity position="0 2 -3" gltf-model="#bird" scale="0.005 0.005 0.005" animation-mixer="clip: Take 001"></a-entity>
+      <a-entity gltf-model="pikachu"></a-entity>  
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4" shadow></a-plane>
+    </a-scene>
+  </body>
+</html>

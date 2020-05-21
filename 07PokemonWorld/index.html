@@ -9,11 +9,11 @@
     <script src="scripts/main.js" defer></script>
   </head>
   <body>
-    <a-scene src="images/sky-blueplains.jpg" position="0 0 0">
+    <a-scene>
       <a-assets>
         <a-assets-item id="hoho" response-type="arraybuffer" src="models/hoho/scene.glb"></a-assets-item>
     </a-assets>
-        <a-sky src="images.sky.jpg"></a-sky>
+      <a-sky color="#6EBAA7"></a-sky>
       <a-entity position="0 2 -3" gltf-model="#hoho" scale="0.005 0.005 0.005" animation-mixer="clip: Take 001"></a-entity>
       <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4" shadow></a-plane>
     </a-scene>
